@@ -1,0 +1,19 @@
+<div id="app">
+    <input b-change="updateValue" b-change.debounce="100" b-model="value">
+    <input b-change.throttle="submitForm" b-model="formData">
+    <input b-change.filter.foo="validateInput" b-model="inputData">
+    <!-- Téléversement simple -->
+<input type="file" b-upload="uploadFile">
+
+<!-- Téléversement multiple avec debounce -->
+<input type="file" b-upload.multiple.debounce="uploadFiles">
+
+<!-- Téléversement avec throttle -->
+<input type="file" b-upload.throttle="uploadFile">
+
+<p lazy>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit officiis nisi saepe pariatur tenetur, odit est. Nulla nesciunt, vel, dolorem id voluptatum similique distinctio modi ullam unde eum, laboriosam ex!</p>
+
+</div>
+{% load static %}
+<script src="https://unpkg.com/morphdom/dist/morphdom-umd.js"></script>
+<script src="{% static 'test/app.js' %}" type="module"></script>

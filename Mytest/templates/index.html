@@ -1,0 +1,38 @@
+    <div id="app">
+        <h1>Bienvenue</h1>
+        <form b-submit="submit" b-valided>
+            <input type="text" b-model="name" placeholder="Entrez votre nom" />
+            <input type="text" b-model="email" placeholder="Entrez votre email" />
+            <button type="submit">Soumettre</button>
+            <p>{{name}}</p>
+        </form>
+        <input type="text" b-live="search" b-live.debounce="1000"  b-model="search_">
+        <p>{{search}}</p>
+        <a b-navigate="/test" href="/test/">go to test</a>
+        <form b-submit="submitForm">
+            <div>
+                <label>Email:</label>
+                <input type="text" b-model="email" data-validate="required|email">
+                <span b-text="email_verified ? 'Email valide' : 'Email invalide'"></span>
+            </div>
+            <div>
+                <label>Mot de passe:</label>
+                <input type="password" b-model="password" data-validate="required|minLength:8">
+                <span b-text="password_verified ? 'Mot de passe valide' : 'Mot de passe trop court'"></span>
+            </div>
+            <button type="submit">Envoyer</button>
+        </form>
+        <button b-click="submit(prince,$email)">creer</button>
+        <button b-click="redirect" >redirect</button>
+        <button b-click="navigation" >navigate </button>
+        <div b-isloading class="loading-spinner" style="display: none;">
+            Chargement en cours...
+        </div>
+        <div b-topload class="top-loading-spinner" style="display: none;">
+            Chargement de la page...
+        </div>
+
+    </div>
+    <!-- {% load static %} -->
+    <script src="https://unpkg.com/morphdom/dist/morphdom-umd.js"></script>
+    <script src="{% static 'test/app.js' %}" type="module"></script>

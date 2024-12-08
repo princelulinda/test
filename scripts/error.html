@@ -1,0 +1,107 @@
+
+    <style>
+        :root {
+            --primary-color: #e53e3e;
+            --secondary-color: #f56565;
+            --background-color: #f7fafc;
+            --text-color: #2d3748;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .error-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            max-width: 600px;
+            width: 90%;
+        }
+        .error-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        .error-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-right: 1rem;
+        }
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 0;
+            color: var(--primary-color);
+        }
+        p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        .error-code {
+            font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            padding: 0.75rem;
+            background-color: #fff5f5;
+            border-radius: 4px;
+            border-left: 4px solid var(--secondary-color);
+        }
+        .error-message {
+            background-color: #f8f9fa;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            padding: 1rem;
+            font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+            font-size: 0.8rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin-bottom: 1.5rem;
+        }
+        .home-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .home-button:hover {
+            background-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-header">
+            <div class="error-icon">⚠️</div>
+            <h1>Une erreur s'est produite</h1>
+        </div>
+        <p>Nous sommes désolés, mais une erreur inattendue s'est produite lors du traitement de votre demande. Notre équipe technique a été informée et travaille à résoudre le problème.</p>
+        <div class="error-code">Error: ENOENT: no such file or directory, open '/path/to/file'</div>
+        <div class="error-message">
+TypeError: Cannot read property 'map' of undefined
+    at Component (/path/to/your/component.js:42:27)
+    at processChild (/path/to/nextjs/internal/lib/react-ssr-prepass.js:229:14)
+    at process (/path/to/nextjs/internal/lib/react-ssr-prepass.js:197:5)
+    at ReactDOMServerRenderer.render (/path/to/nextjs/internal/lib/react-ssr-prepass.js:294:22)
+    at Object.renderToString (/path/to/nextjs/internal/lib/react-ssr-prepass.js:360:10)
+    at doRender (/path/to/nextjs/internal/lib/render.js:50:34)
+    at renderToString (/path/to/nextjs/internal/lib/render.js:40:10)
+    at render (/path/to/nextjs/internal/lib/render.js:77:22)
+    at renderToHTML (/path/to/nextjs/internal/lib/render.js:120:10)
+    at async doRender (/path/to/nextjs/internal/lib/render.js:185:34)</div>
+        <a href="/" class="home-button">Retour à l'accueil</a>
+    </div>
